@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Green Grass</title>
+</head>
+
+<body>
+  <button onclick="document.getElementById('lawnformdiv').style.display='block'" style="width:auto;">Login</button>
+
+  <div id="lawnformdiv" class="modal">
+    <form class="form" action="filename.php" method="post">
+      <div class="formdiv">
+        <div id="topdiv">
+          <span onclick="document.getElementById('lawnformdiv').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+          <h2 id="lawncareservices">Lawn Care Services:</h2>
+        </div>
+        <input type="checkbox" id="Mowing">
+        <label for="Mowing">Mowing</label>
+        <br>
+        <br>
+        <input type="checkbox" id="Edging">
+        <label for="Edging">Blade Edging</label>
+        <br>
+        <br>
+        <input type="checkbox" id="Weedwhacking">
+        <label for="Weedwhacking">Weed Whacking and Fence Edging</label>
+        <br>
+        <br>
+        <input type="checkbox" id="Blowing">
+        <label for="Blowing">Blowing Grass Clippings</label>
+        <br>
+        <br>
+        <br>
+        <br>
+        <label for="Frequency">Frequency of Lawn Care</label>
+        <select id="Frequency" name="Frequency">
+          <option value="weekly">Weekly</option>
+          <option value="biweekly">Every Other Week</option>
+          <option value="triweekly">Every Three Weeks</option>
+          <option value="custom">Custom Care (describe)</option>
+        </select>
+        <br>
+        <br>
+        <label for="b">Every </label>
+        <input type="number" id="b" name="b" value="1" style="width:28px" min="1" max="4">
+        <label for="b">Week(s)</label>
+        <br>
+        <br>
+        <br>
+        <br>
+        <label for="startday">First Care:</label>
+        <br>
+        <br>
+        <label for="starttime">Time:</label>
+        <input type="time" id="starttime" name="starttime">
+        <br>
+        <br>
+        <label for="startday">Date:</label>
+        <input type="date" id="startday" name="startday">
+        <br>
+        <br>
+        <br>
+        <br>
+        <label for="fname">Your Information:</label>
+        <br>
+        <br>
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" value="" style="width:200px" placeholder="Enter Your Full Name">
+        <br>
+        <br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}*[0-9]{3}*[0-9]{4}" placeholder="Phone Number">
+        <br>
+        <br>
+      </div>
+      <div class="submit">
+        <input id="lawnsubmit" type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+
+  <!--
+  <footer>
+    <p>Contact us at (801) 680-7891</p>
+  </footer>
+  -->
+  <script>
+    // Get the modal
+    var modal = document.getElementById('lawnformdiv');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>
